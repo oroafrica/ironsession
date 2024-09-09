@@ -18,16 +18,36 @@
 
 body {
   color: rgb(var(--foreground-rgb));
-  background: linear-gradient(
+  /* background: linear-gradient(
       to bottom,
       transparent,
       rgb(var(--background-end-rgb))
     )
-    rgb(var(--background-start-rgb));
+    rgb(var(--background-start-rgb)); */
 }
 
 @layer utilities {
   .text-balance {
     text-wrap: balance;
   }
+}
+/* Navigation Bar */
+.navbar {
+  @apply fixed w-full z-50 bg-gray-900 text-white;
+}
+
+.navbar-container {
+  @apply flex justify-evenly items-center mx-auto max-w-7xl py-4 px-4 sm:px-6 lg:px-8 ;
+}
+
+.navbar-brand {
+  @apply text-xl font-bold;
+}
+
+.navbar-nav {
+  @apply flex space-x-4;
+}
+
+.navbar-nav a {
+  @apply hover:text-gray-400 transition-colors duration-300;
 }
